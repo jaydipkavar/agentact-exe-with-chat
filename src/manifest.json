@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "version": "0.1.6",
+  "name": "agentAct",
+  "description": "Track user interactions on web pages",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "windows",
+    "sidePanel",
+    "identity"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Click to Open Side Panel"
+  },
+  "side_panel": {
+    "default_path": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "icons": {
+    "16": "src/icons/icon-16.png",
+    "32": "src/icons/icon-32.png",
+    "64": "src/icons/icon-64.png",
+    "128": "src/icons/icon-128.png"
+  },
+  "options_page": "options.html",
+  "oauth2": {
+    "client_id": "16179356269-a46n1tuc8s5bkt0oqdecrkbu5rset9ah.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  },
+  "key": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsHOECffu1h36WY7C6U9R\ncv8xBcGb5HYUK6i9w11/anDdUdUpKpsI1QG1nKyUDwhJ+0TuYs+PCMQX6uDxNi2g\nPtoNWN1U8qLEadk5tslBXQx37woOmZK0r6DLCyFCNfLXgg9aqKoSZE3U1NG8ouvG\nLi8o5jviE0Fd9jtHYOfrgn9Bj/Qdmb5NW9gcKYl5fap4Zra0jPyNVbYMBguP7QF/\nqo42gFBAW7PZJVOHogJyDQaXs/ODstPSor425IRQoTKzkyVrJnBMhKa1KbAcjDzO\nf/kbq7BlUFGpZTpibUEWOeCMeAqNfeo1KbTKrevurKie/pNuDigTehUrpnRDNZjx\nAQIDAQAB\n-----END PUBLIC KEY-----\n"
+}

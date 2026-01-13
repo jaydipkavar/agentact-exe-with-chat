@@ -1,0 +1,53 @@
+// {
+//   // Basic editor performance
+//   "editor.formatOnSave": true,
+//   "editor.formatOnPaste": false,
+//   "editor.codeActionsOnSave": {
+//     "source.fixAll": "explicit"
+//   },
+//   "editor.minimap.enabled": false,
+//   "editor.cursorSmoothCaretAnimation": "off",
+
+//   // JS/HTML/CSS specific
+//   "javascript.suggest.autoImports": false,
+//   "css.validate": true,
+//   "html.format.enable": true,
+
+//   // Disable heavy suggestions
+//   "typescript.suggest.enabled": false,
+
+//   // Reduce file watchers
+//   "files.watcherExclude": {
+//     "**/.git/objects/**": true,
+//     "**/node_modules/**": true,
+//     "**/dist/**": true,
+//     "**/.next/**": true
+//   },
+
+//   // Disable unused providers
+//   "emmet.includeLanguages": {
+//     "javascript": "javascriptreact",
+//     "vue-html": "html"
+//   },
+
+//   // Terminal speedup
+//   "terminal.integrated.scrollback": 500,
+
+//   // Disable error lens if installed
+//   "errorLens.enabled": false,
+
+//   // Prettier or default formatter
+//   "editor.defaultFormatter": "esbenp.prettier-vscode"
+// }
+{
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.git": true,
+    "**/dist": true
+  },
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "never"
+  },
+  "eslint.enable": false
+}
